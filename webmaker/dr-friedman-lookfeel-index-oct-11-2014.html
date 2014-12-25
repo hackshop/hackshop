@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+ <html><head>
+    <meta charset="utf-8">
+    <base href=".">
+    <meta content="thimblemag" name="webmaker:tags">
+    <title>My Magazine Cover</title>
+    <link href="https://fonts.googleapis.com/css?family=BenchNine:300" rel="stylesheet" type="text/css">
+    <style>
+
+        body {
+        text-align: center;
+        background: url(https://mozillawebmakerproxy.net/ac47e22b03fed4e82bafeaa2bbd162ea64f35ca9?url=http://photos1.blogger.com/blogger/6789/1840/1600/IMG_1270.jpg) top center;
+        }
+
+        .book {
+        text-align: left;
+        background: transparent url(https://i.imgur.com/vTumt.png) -67px -50px no-repeat;
+        width: 398px;
+        height: 607px;
+        margin: 0 auto;
+        padding: 35px 30px 30px 38px;
+        }
+
+        .border {
+        width: 395px;
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+        }
+
+
+        /*
+        Several tag can be modified at once.
+        This is where you header styles are defined. Try changing the size or the font attributes.
+        */
+        h1, h2, h3, h4, h5
+        {
+        font-family: 'BenchNine', sans-serif;
+        text-transform: uppercase;
+        background: blue;
+        color: #darkblue;
+        position: relative;
+        display: inline-block;
+        float: left;
+        clear: left;
+        margin: 0 25px;
+        padding: 0 0.3em;
+        }
+
+        /*
+        This is where your <h1> header style is defined. Try changing the size or the font attributes.
+          */
+
+          h1 {
+          margin-top: 22px;
+          font-size: 50px;
+          padding: 0 0.1em;
+          }
+
+          h2 {
+          margin-top: 350px;
+          font-size: 30px;
+          /*transform: rotate(-5deg);*/
+          float: left;
+          font-size: 25px;
+          padding: 0.2em;
+          }
+
+          h3, h4, h5
+          {
+          background: #FFFFFF;
+          color: #3a3a3c;
+          font-size: 27px;
+          padding: 0.2em;
+          }
+
+          h4 {
+          color: #FF0000;
+          }
+
+          img {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 110%;
+          height: 100%;
+          }
+      </style>
+  <script>(function fixExternalLinks() {
+              function pointToBlank(a) {
+                var href = a.getAttribute("href");
+                if (href && href.indexOf("//") > -1) {
+                  // this is an external link.
+                  if(!a.getAttribute("target")) {
+                    a.setAttribute("target", "_blank");
+                  }
+                }
+              }
+              function fixLinks() {
+                document.removeEventListener("DOMContentLoaded", fixLinks);
+                var anchors = document.querySelectorAll("a");
+                var asArray = Array.prototype.slice.call(anchors);
+                asArray.forEach(function(a) {
+                  pointToBlank(a);
+                });
+              }
+              document.addEventListener("DOMContentLoaded", fixLinks);
+            }())</script>
+</head>
+  <body>
+    <div class="book">
+      <div class="border">
+       
+        <!--
+            Change the Magazine cover by cutting and pasting the src attribute of the <img> tag from down below into the <img> tag below. The src attribute defines the URL for the image and is a required part of the <img> tag. Or you can just cut and paste the entire <img> tag. Note that the <img> tag is one of the few weird tags that doesn't need a close tag. 	
+          -->
+        <img src="http://photos1.blogger.com/blogger/6789/1840/1600/IMG_1277.jpg">
+       
+        <!--
+            The following text uses an <h1> tag, where "h" stands for header and "1" means most important, or in most cases, biggest, followed by h2, h3, etc. It is used to build an outline or hierarchy into your page. Think about changing the text in the <h1> tag to something that will really grab your readers attention. Use the <h2>, or subheader.
+          -->
+      <h1>today I feel so</h1>
+        <!--
+            The level of importance of the titles is represented by the number next to the h from h1 to h6
+          -->
+        <h2>Oct 11, 2014</h2>
+      <h3>Look/Feel Index</h3>
+        <h4>@omnignorant</h4>
+      </div>
+    </div>
+  
+
+</body></html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Webmaker metas -->
+    <meta name="webmaker:description" content="Create your own Interactive Poster">
+    <meta name="webmaker:thumbnail" content="http://stuff.webmaker.org.s3.amazonaws.com/thumbnails/7_my_life.jpg">
+
+
+    <!--
+        Prior Knowledge
+        ***************
+        This is an advanced tutorial, and it tackles some more advanced CSS. It would be good to learn from other tutorials such as the 'Keep Calm...' poster or the 'Book Cover' poster before attempting this one.
+        
+
+         What you'll Learn
+        ******************
+        - You'll be editing various text and image elements to create interesting content for your reader.
+        - You'll be transition properties to customize how the hover animations look.
+        - You'll learn how useful the :hover psuedo-class is for styling elements.
+        -You'll be learning about the transform property, and how this ties in with the transition property to create beautiful animations.
+        - You'll be learning about more advanced psuedo-selectors to change the colors of the circles.
+        
+        Tasks
+        ******************
+        TASK 1) -  Change the text throughout the HTML to personalise the interactive poster
+        TASK 2) -  Change the transition properties to customize the hover animations 
+        TASK 3) -  Learn how the :hover psuedo-class works
+        TASK 4) -  Change the transform properties to customize how the images scale when hovered
+        TASK 5) -  Change the colors of the circles using more pseudo-classes
+    -->
+
+    <!--         
+        A good place to start is with the title. Personalize the title of your
+        page by changing the text within the <title>Remix of </title> tags. This title appears at the top of the browser in the tab.
+    -->
+    <title>My Animating Poster Edit</title>
+    
+<script>(function fixExternalLinks() {
+              function pointToBlank(a) {
+                var href = a.getAttribute("href");
+                if (href && href.indexOf("//") > -1) {
+                  // this is an external link.
+                  if(!a.getAttribute("target")) {
+                    a.setAttribute("target", "_blank");
+                  }
+                }
+              }
+              function fixLinks() {
+                document.removeEventListener("DOMContentLoaded", fixLinks);
+                var anchors = document.querySelectorAll("a");
+                var asArray = Array.prototype.slice.call(anchors);
+                asArray.forEach(function(a) {
+                  pointToBlank(a);
+                });
+              }
+              document.addEventListener("DOMContentLoaded", fixLinks);
+            }())</script>
+</head>
+<body>
+
+<div class="wrapper">
+
+
+    <div class="header">
+
+        <!--
+            Change the main page heading to something that is relevant to the poster you want to create. What about 'My Favorite Sports' or 'My Top 10 Actors'?
+        -->
+        <h1>My Favourite Things</h1>
+    </div>
+
+    <!-- 
+        This 'col-2' <div> is used to set a width on the 'column-container' <div>'s. Change this to 'col-1' to have only one image per row (although this will also stretch the images, which can look strange, unless you pick very wide images). 
+
+        Find the 'col-2 > div' and 'col-1 > div' selectors in the CSS to see how this is done.
+    -->
+    <div class="col-2 clearfix">
+
+        <!--
+            TASK 1) -  Change the text throughout the HTML to personalise the interactive poster
+            *****************************************************
+            Below is one block of HTML which creates each 'tile' on the page. You should by now be familiar with changing content such as headings, parapgraphs and images.
+
+            Try going through each tile and changing the images (using Flickr is a good choice), the headings and the parapraph text. If you haven't spotted it already, the paragraph text is hidden until the user hovers over the tile. Give it a try.
+        -->
+        <div class="tile-container">
+            <div class="interest-box">
+                <img src="http://farm1.staticflickr.com/160/398496381_2d246202cb_o.jpg" alt="A family photo.">
+                <div class="circle">
+                    <h2>Family</h2>
+                    <p class="hidden-text">So, my Dad is really embarrassing and my sister takes all my favourite things without asking. But that doesn’t stop them being amazing, and the most important people to me.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tile-container">
+            <div class="interest-box">
+                <img src="http://farm4.staticflickr.com/3484/3830591129_e7518090c2_o.jpg" alt="A man cycling on a road bike.">
+                <div class="circle">
+                    <h2>Cycling</h2>
+                  <p class="hidden-text">One day, I’m going to be as wicked as Wiggins. I’m cycling all the way to the <a href="https://webmaker.makes.org/thimble/my-awesome-wall">Olympics</a> – that’s why my bike and I go everywhere together.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tile-container">
+            <div class="interest-box">
+                <img src="http://farm3.staticflickr.com/2728/4340980647_3436e703ed_z.jpg?zz=1" alt="A pile of books.">
+                <div class="circle">
+                    <h2>Literature</h2>
+                    <p class="hidden-text">Books are amazing because they can take you anywhere. This month alone I’ve been on a boat with a tiger and had to fight for my school against a dragon.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tile-container">
+            <div class="interest-box">
+                <img src="http://farm4.staticflickr.com/3134/2502126129_f026fe046f_z.jpg?zz=1" alt="A video game console controller.">
+                <div class="circle">
+                    <h2>Video Games</h2>
+                    <p class="hidden-text">Zombies, spies, aliens, enemy soldiers, trolls, dragons or the other car thief. Whatever you’re up against, nothing feels more awesome than winning the game.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            At the minute there are only 4 columns. If you want to add more columns, simply copy one of the blocks of code beginning and ending with the .tile-container <div> and paste it just above this comment. Do this as many times as you like to create new tiles.
+        -->
+    </div>
+
+</div> <!-- /end of wrapper -->
+
+<!--
+    The links below are for Google Web Fonts. We use these links to obtain the fonts, and then use the 'font-family' property in CSS to tell the browser which elements the new fonts should be applied to.
+-->
+<link href='//fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+    
+<style>
+
+    /*
+        This is the start of the pages CSS. Feel free to go through and change values to personalise the look of your book. Start with things such as colors, padding and font-sizes to get a feel for how the page is built.
+  
+  Below you'll also see that we've applied a background image to this website. The image is actually an old map taken from the Flickr Commons, which is a great resource for cultural assets that are publicly available from a wide variety of sources around the world. Original map found here: http://www.flickr.com/photos/mississippi-dept-of-archives-and-history/8513127301/in/photostream/ 
+  
+    */
+
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    body {
+        background:url(https://mozillawebmakerproxy.net/87946f11cc6c1fa5072589b6e42ad65da1e8731c?url=http://farm9.staticflickr.com/8530/8513127301_61bf438c69_h.jpg)no-repeat center center;
+        color:#333;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size:18px;
+        font-weight:normal;
+        line-height:1;
+        margin:0;
+    }
+
+    .wrapper {
+        display: block;
+        margin:0px auto 40px;
+        width: 800px;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-weight:normal;
+        margin:0;
+    }
+
+    .header {
+        font-family: 'Oleo Script', cursive;
+        font-size:40px;
+        padding:40px;
+        text-align: center;
+    }
+
+    .tile-container {
+        overflow:hidden;
+    }
+
+    .interest-box {
+        cursor:pointer;
+        height:340px;
+        position:relative;
+    }
+
+    /*
+        TASK 2) -  Change the transition properties to customize the hover animations 
+        *****************************************************
+        The code below controls the transition properties. Using these transition properties allows us to animate changes. In this case we are telling the browser to animate all of the elements that are changing for 0.5 seconds and to use the 'ease-out' timing function.
+
+        Change the '0.5s' to a higher number to see how this alters the animation speed.
+    */
+    .interest-box img {
+        height:100%;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        width:100%;
+    }
+
+    .circle {
+        background-color:rgba(117,230,240,0.9);
+        border-radius:50%;
+        height:300px;
+        left:50%;
+        margin-left:-150px;
+        margin-top:-150px;
+        padding:20px;
+        position:absolute;
+        top:50%;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        width:300px;
+    }
+
+     h2 {
+        color:white;
+        display:block;
+        font-family: 'Julius Sans One', sans-serif;
+        position:relative;
+        text-align:center;
+        text-transform: lowercase;
+        top:45%;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hidden-text {
+        font-size:16px;
+        font-weight:300;
+        opacity:0;
+        position:relative;
+        text-align:center;
+        top:20%;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+
+    /*
+        TASK 3) -  Learn how the :hover psuedo-class works
+        *****************************************************
+        ':hover' is a pseudo-class. Psuedo classes are great as they allow us to select elements based on a variety of factors. As you have probably worked out, ':hover' allows us to style an element for when it is hovered over. Hover states are good as they allow us to give some visual feedback to the user when they have hovered over something. Hover states are often used to style links.
+
+        The example below tells the browser to change the opacity of the <h2> elements to 0 when the user hovers on the .interest-box element.
+    */
+    .interest-box:hover h2 {
+        opacity:0;
+    }
+
+    .interest-box:hover .hidden-text {
+        opacity:1;
+    }
+
+    .tile-container .interest-box:hover .circle {
+        background-color:rgba(255,255,255,0.95);
+    }
+
+    /*
+        TASK 4) -  Change the transform properties to customize how the images scale when hovered
+        *****************************************************
+        Now that we know that 'transitions' control the animation properties, we should learn what 'transforms' do. They control which element should change (or transform) and in which way. Without this transform, there would be nothing to animate, which is why the two proeprties work well together.
+
+        In the example below, we are telling the browser to scale images up slightly when a user hovers over the .interest-box element (as long as the images in question are contained inside this .interest-box element). Try changing the '1.05' integer to something smaller to make the images shrink in size when you hover, or a bigger number to make the images blow-up in size when you hover (e.g. changing it to 0.5 is quite a cool effect).
+    */
+    .interest-box:hover img {
+        -ms-transform:scale(1.05); /* IE 9 */
+        -moz-transform:scale(1.05); /* Firefox */
+        -webkit-transform:scale(1.05); /* Safari and Chrome */
+        -o-transform:scale(1.05); /* Opera */
+        transform:scale(1.05);
+    }
+
+    /* Column Layout */
+
+    .col-2 > div {
+        float:left;
+        width:50%;
+    }
+
+    .col-1 > div {
+        width:100%;
+    }
+
+    /*
+        TASK 5) -  Change the colors of the circles using more pseudo-classes
+        *****************************************************
+        The blue circles can be targeted in a variety of ways. We could add different classes to each circle element in the HTML and then style them that way, (which is a good way).
+
+        Sometimes adding classes is not suitable or efficient, especially if you have lots of elements on the page in a grid type layout, as individually adding classes can take a long time. Psuedo-classes are a way of targeting specific elements on the page and styling them.
+
+        The example below targets each of the four circles and gives it a background-color. The :first-child selector does just that - it selects the first child element. The nth-child(2) selects the 2nd child and so on...
+
+        These types of pseudo-selectors can be hard to get your head around, so don't worry if they don't make sense. Have a play around with the code below to see how each one can change individual elements on the page.
+    */
+
+    .tile-container:first-child .circle {
+        background-color:rgba(117,230,240,0.9);
+    }
+    .tile-container:nth-child(2) .circle {
+        background-color:rgba(117,230,240,0.9);
+    }
+    .tile-container:nth-child(3) .circle {
+        background-color:rgba(117,230,240,0.9);
+    }
+    .tile-container:last-child .circle {
+        background-color:rgba(117,230,240,0.9);
+    }
+
+    .clearfix:after { 
+        visibility: hidden; 
+        display: block; 
+        font-size: 0; 
+        content: " "; 
+        clear: both; 
+        height: 0; 
+    }
+    
+
+</style>
+    
+</body>
+</html>
