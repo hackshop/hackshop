@@ -1,0 +1,3 @@
+[submodule "sketchbook/Adafruit_GFX"]
+	path = sketchbook/Adafruit_GFX
+	url = https://github.com/adafruit/Adafruit-GFX-Library
