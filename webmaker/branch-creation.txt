@@ -1,0 +1,32 @@
+
+
+git config --global user.name "BSF STEM Scholar"
+git config --global user.email stemscholar.bsf@gmail.com
+
+cd ~
+pwd
+/home/stemscholar
+
+git clone https://github.com/hackshop/hackshop/
+
+cd hackshop
+pwd
+/home/stemscholar/hackshop
+
+ls
+
+git branch
+* master
+
+git branch yourname
+
+git branch
+* master
+  yourname
+
+git checkout yourname
+
+git branch
+  master
+* yourname
+

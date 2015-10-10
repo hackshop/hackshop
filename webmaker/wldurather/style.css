@@ -1,0 +1,29 @@
+div {
+  padding: 10px 0px 10px 0px;
+}
+
+div.box {
+  width: 300px;
+}
+
+div.angle {
+  -webkit-transform: rotate(-8eg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  writing-mode: lr-tb;
+}
+
+.title {font-size: 6em;}
+
+.option {font-size: 2em;}
+
+.btn {
+  border: solid grey 2px;
+  border-radius: 10px;
+  padding: 1.2em 0em 1.2em 0em;
+}
+
+.btn-return {
+  background-color: gold;
+  color: black;
+}
