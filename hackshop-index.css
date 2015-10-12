@@ -86,7 +86,7 @@ body {
 .nav-heading {
   background-color: #B7090C;
   color: white;
-  font-size: x-large;
+  font-size: large;
   padding: 10px 10px 10px 10px;
   border-top: solid 1px;
 }
@@ -121,9 +121,16 @@ body {
   margin-bottom: 0;
 }
 .placeholder {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  min-height: 450px;
 }
 .placeholder img {
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 5%;
 }
+
+
+.bookmark {
+}
+
+

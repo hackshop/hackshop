@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="../assets/stem-scholar-favicon.jpg">
+
+	    <title>HackShop on GitHub</title>
+
+	    <!-- Bootstrap core CSS -->
+	    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+		<!-- Latest compiled and minified CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom styles for this template -->
+	    <link href="../hackshop-index.css" rel="stylesheet">
+
+	    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <!--
+	    <link href="https://stuff.webmaker.org/makerstrap/latest/makerstrap.complete.min.css" rel="stylesheet"> 
+		-->
+	</head>
+
+	<body>
+
+	   <nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">HackShop</a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="http://hackshop.github.io/hackshop/">Index of Levels</a></li>
+	            <li><a href="http://hackshop.github.io/hackshop/webmaker/">Student Templates</a>
+	            <li><a href="http://bsfstemscholars.com/8th-grade">STEM Scholars</a></li>
+	            <li><a href="https://www.edmodo.com/home#/group?id=14902115">HackShop EdModo</a></li>
+	            <li><a href="https://github.com/hackshop">GitHub Repo</a></li>
+	          </ul>
+	          <!--<form class="navbar-form navbar-right">
+	            <input type="text" class="form-control" placeholder="Search...">
+	          </form>
+	      		-->
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container-fluid">
+	      <div class="row">
+	        <div class="col-sm-3 col-md-2 sidebar">
+				<div class="nav nav-sidebar"><img src="../assets/HackShopLogo.png" class="img-responsive"></div>
+				<div class="nav nav-sidebar nav-heading media">
+		       		<div class="media-left">
+						<img src="../assets/HackShop-64x64.jpg" class="img-responsive img-rounded media-object" alt="HackShop Mascot">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Level 2:<br>Intro to Software with Mozilla</h4>
+		        	</div>
+		    	</div>
+	          <ul class="nav nav-sidebar">
+	            <li><a href="./challenge02-01.html">2.1: X-Ray Goggles</a></li>
+	            <li class="active"><a href="./challenge02-02.html">2.2: Hack The News</a>
+	            	<ul>
+	            		<li><a href="#step1">Step 1: Remix a news article</a></li>
+	            		<li><a href="#step2">Step 2: Change an image</a></li>
+	            		<li><a href="#step3">Step 3: An exemplar</a></li>
+	            	</ul>
+	            </li>
+	            <li><a href="./challenge02-03.html">2.3: Would You Rather?</a></li>
+	            <li><a href="./challenge02-04.html">2.4: Pop Quiz</a></li>
+	            <li><a href="./challenge02-05.html">2.5: Mobile to Desktop</a></li>
+	          </ul>
+	          <hr>
+	          <div class="nav nav-sidebar nav-heading">
+	          	<h4>All Levels</h4>
+          		</div>
+	          <ul class="nav nav-sidebar">
+	            <li><a href="">Level 0: The Community</a></li>
+	            <li><a href="">Level 1: Get Plugged In</a></li>
+	            <li><a href="">Level 2: Web Design</a></li>
+	            <li><div>Level 3: MaKey MaKey</div></li>
+	            <li><div>Level 4: MIT Scratch</div></li>
+	            <li><div>Level 5: Arduino Basics</div></li>
+	            <li><div>Level 6: MIT App Inventor</div></li>
+	          </ul>
+	        </div>
+	        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	        	<h1>Hack the News</h2>
+				<h2>N00B Challenge 2.2 [20pts]</h2>
+				<p><em>Activity adapted from <a href="http://mozilla.github.io/webmaker-curriculum/WebLiteracyBasics-I/session02-hackthenews.html">Mozilla Clubs</a>.</em></p>
+				<p>Use the X-Ray Goggles bookmark to hack Chicago's DNA Info news website: <a href="http://www.dnainfo.com/chicago/" target="_blank">http://www.dnainfo.com/chicago/</a> and make the news ALL ABOUT YOU!</p>
+
+				<hr />
+
+				<div class="jumbotron" id="step1">
+					<h2>STEP 1: Find and Remix a News Article</h2>
+					Pick one news story on their website and change the following items:
+					<ol>
+						<li>Change the title;</li>
+						<li>Change at least one photo/image and it's caption;</li>
+						<li>Change the text for at least one paragraph of the story;</li>
+					</ol>
+				</div>
+
+				<div class="jumbotron" id="step2">
+					<h2>STEP 2: How do you change an image?</h2>
+					If you click on an image, you might find something similar to:
+					<pre>&lt;img src="http://thisisawebsite.com/thisisanimage.jpg"&gt;</pre>
+					The "image source" is the web address, or Universal Resource Locator (URL), for an image. It's the location of that image in the web. You just need to replace the URL to change the image!
+					<blockquote><strong>PRO Tip:</strong> You can use Google to search for images. Once you have found an image you want to use, click on "View Image" to get the image URL.</blockquote>
+				</div>
+
+				<div class="jumbotron" id="step3">
+					<h2>Here is <a href="http://stemscholar-bsf.makes.org/goggles/stemscholarbsfs-remix-of-el-charro-closes-after-30-years-in-logan-square-ramen-shop-to-move-in-logan-square-dnainfocom-chicago-3" target="_blank">an example</a> from Dr. Friedman.</h2>
+					
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="http://stemscholar-bsf.makes.org/goggles/stemscholarbsfs-remix-of-el-charro-closes-after-30-years-in-logan-square-ramen-shop-to-move-in-logan-square-dnainfocom-chicago-3" ></iframe>
+					</div>
+				</div>
+	        </div>
+
+
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	    <script src="../../assets/js/vendor/holder.min.js"></script>
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+	</body>
+	
+</html>
