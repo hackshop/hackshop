@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="../assets/stem-scholar-favicon.jpg">
+
+	    <title>HackShop on GitHub</title>
+
+	    <!-- Bootstrap core CSS -->
+	    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+		<!-- Latest compiled and minified CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom styles for this template -->
+	    <link href="../hackshop-index.css" rel="stylesheet">
+
+	    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <!--
+	    <link href="https://stuff.webmaker.org/makerstrap/latest/makerstrap.complete.min.css" rel="stylesheet"> 
+		-->
+	</head>
+
+	<body>
+
+	   <nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="http://hackshop.github.io">HackShop</a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="http://hackshop.github.io/hackshop/">Index of Levels</a></li>
+	            <li><a href="http://hackshop.github.io/hackshop/webmaker/">Student Templates</a>
+	            <li><a href="http://bsfstemscholars.com/8th-grade">STEM Scholars</a></li>
+	            <li><a href="https://www.edmodo.com/home#/group?id=14902115">HackShop EdModo</a></li>
+	            <li><a href="https://github.com/hackshop">GitHub Repo</a></li>
+	          </ul>
+	          <!--<form class="navbar-form navbar-right">
+	            <input type="text" class="form-control" placeholder="Search...">
+	          </form>
+	      		-->
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container-fluid">
+	      <div class="row">
+	        <div class="col-sm-3 col-md-2 sidebar">
+				<div class="nav nav-sidebar"><img src="../assets/hackshop-logo.png" class="img-responsive"></div>
+				<div class="nav nav-sidebar nav-heading media">
+		       		<div class="media-left">
+						<img src="../assets/HackShop-64x64.jpg" class="img-responsive img-rounded media-object" alt="HackShop Mascot">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Level 2:<br>Intro to Software with Mozilla</h4>
+		        	</div>
+		    	</div>
+	          <ul class="nav nav-sidebar">
+	            <li><a href="./challenge02-01.html">2.1: X-Ray Goggles</a></li>
+	            <li><a href="./challenge02-02.html">2.2: Hack The News</a></li>
+	            <li class="active"><a href="./challenge02-03.html">2.3: Would You Rather?</a>
+	            	<ul>
+	            		<li><a href="#step1">Step 1: Storyboards</a></li>
+	            		<li><a href="#step2">Step 2: Image Search</a></li>
+	            		<li><a href="#step3">Step 3: Remix a Prototype</a></li>
+	            		<li><a href="#step4">Step 4: Link Logic</a></li>
+	            		<li><a href="#step5">Step 5: Share Your Work!</a></li>
+	            	</ul>
+				</li>
+	            <li><a href="./challenge02-04.html">2.4: Pop Quiz</a></li>
+	            <li><div>2.5: Mobile to Desktop</div></li>
+	          </ul>
+	          <hr>
+	          <div class="nav nav-sidebar nav-heading">
+	          	<h4>All Levels</h4>
+          		</div>
+	          <ul class="nav nav-sidebar">
+	            <li><div>Level 0: The Community</div></li>
+	            <li><div>Level 1: Get Plugged In</div></li>
+	            <li><a href="./challenge02-01.html">Level 2: Web Design</a></li>
+	            <li><div>Level 3: MaKey MaKey</div></li>
+	            <li><div>Level 4: MIT Scratch</div></li>
+	            <li><div>Level 5: Arduino Basics</div></li>
+	            <li><div>Level 6: MIT App Inventor</div></li>
+	          </ul>
+	        </div>
+	        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	        	<h1>Would You Rather?</h2>
+				<h2>N00B Challenge 2.3 [20pts]</h2>
+				<p><em>Original Activity from <a href="http://www.omnignorant.com/2015/08/seven-things-i-learned-demo-ing-the-webmaker-app-this-summer/" target="_blank">omnignorant</a>.</em></p>
+				
+				<h4>The Web is made up of really just 3 things: text, media and hyperlinks. They live in pages or connect them to make up everything on the internet. You will use these three building blocks to build a <em>Would You Rather</em> style quiz for your friends using Mozilla's <a href="http://mzl.la/webmaker" target="_blank">Webmaker app for Android</a>.</h4>
+
+				<center><a class="btn btn-primary" role="button" href="http://mzl.la/webmaker" target="_blank"><span class="glyphicon glyphicon-download"></span>&nbsp;&nbsp;&nbsp;Download the Webmaker App</a> </center>
+				<h3>You will brainstorm your design, prototype it, build it and then test it out to see if it works.</h3>
+
+				<hr />
+
+				<div class="jumbotron" id="step1">
+					<h2>STEP 1: Brainstorm a Storyboard</h2>
+					<p>A Would You Rather quiz is the most basic quiz. There are only two answers, and neither of them is right or wrong. You win no matter which choice you make! So, what's your would you rather? Before we're ready to make this quiz a digital make for the web, we're going to assemble all the pieces first.</p>
+					<ol style="font-size: large;">
+						<li>Grab a paper storyboard template and a crayon; start with the first tile;</li>
+						<li>What's your <em>action phrase</em>? Is it eat? Watch? Buy? Play? Fill it in;</li>
+						<li>Decide what your two choices are. Frogs or Bunnies? Cars or Planes? Pick two;</li>
+						<li>Now, take a minute to sketch out the ideal images you'd like see on the next two pages;</li>
+					</ol>
+					<p>For example: Would You Rather <strong>Drink</strong>... Coffee or Tea?</p>
+					&nbsp;
+					<center><img src="../assets/wldurather-template.jpg" class="img-responsive" alt="Would You Rather Storyboard Template" width="80%"></center>
+				</div>
+
+				<div class="jumbotron" id="step2">
+					<h2>STEP 2: Find The Perfect Images Online</h2>
+					<p>A storyboard helps you get creative and plan for your digital make. The next step is to pull together all of the digital pieces that you will use for the final product. So, let's grab those images first.</p>
+					<ol style="font-size: large;">
+						<li>Use Google to search for images on the tablet;</li>
+						<li>When you find an image you like, click and hold down until you're prompted to save it;</li>
+						<li>Save your images to the tablet for use in the next step;</li>
+						<li>See the images below for two examples: Would You Rather <strong>Drink</strong>... Coffee or Tea?</li>
+					</ol>
+					&nbsp;
+					<div class="row">
+						<div class="col-md-6">
+							<center>
+								<img src="http://cdn1.medicalnewstoday.com/content/images/articles/289/289891/coffee.jpg" class="img-responsive" alt="Would You Rather Storyboard Template" width="90%">
+								<h3>Coffee</h3>
+							</center>
+						</div>
+						<div class="col-md-6">
+							<center>
+								<img src="http://cdn.images.express.co.uk/img/dynamic/130/590x/secondary/148136.jpg" class="img-responsive " alt="Would You Rather Storyboard Template" width="90%">
+								<h3>Tea</h3>
+							</center>
+						</div>
+					</div>
+				</div>
+
+				<div class="jumbotron" id="step3">
+					<h2>STEP 3: Remix a Prototype</h2>
+					<p>Now that you have a design and the building blocks, it's time to build a prototype. Follow the steps below to find the Would You Rather Webmaker App template online, open it up in Webmaker, and make it your own!</p>
+					<ol style="font-size: large;">
+						<li>On the tablet, go to <a href="http://bit.ly/webmaker-wldurather">bit.ly/webmaker-wldurather</a></li>
+						<li>Play the example: Would You Rather <strong>Drink</strong>... Coffee or Tea?</li>
+						<li>Click on the <a class="btn btn-default btn-xs" role="button"><span class="glyphicon glyphicon-option-horizontal"></span></a> menu on the top-right corner of the screen and select <code>Remix</code>to create your own copy;</li>
+						<li>When your remix loads, Click on the <a class="btn btn-default btn-xs" role="button"><span class="glyphicon glyphicon-option-horizontal"></span></a> menu again and go to the options to give it a title;
+							<ul><li>Name your remix <code>Your Name and Partner's Name Would you rather Quiz</code>;</li></ul>
+						</li>
+						<li>Use the <a class="btn btn-default btn-xs" role="button"><span class="glyphicon glyphicon-pencil"></span></a> button to edit the make; click on buttons, text, or images to edit them;</li>
+						<li>Replace the words and images to make them your own!</li>
+					</ol>
+				</div>
+
+				<div class="jumbotron" id="step4">
+					<h2>STEP 4: Draw the Link Logic</h2>
+					<p>So, how does this quiz even work, really? What connects the first page with the option buttons to the other two pages with the results? You may have guessed it: <strong>hyperlinks</strong>. The web is constructed from text, media and hyperlinks, which connect pages. Sometimes these can appear as highlited text or sometimes they can be buttons.</p>
+					<blockquote>Use a pencil, pen or crayon to go back to your paper prototype and draw lines between the buttons and the pages they connect to. If you get stuck, click below to reveal the a completed example.</blockquote> 
+					<center><button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#test" aria-expanded="false" aria-controls="test"> <span class="glyphicon glyphicon-collapse-down"></span>&nbsp;&nbsp;&nbsp;Reveal Solution&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-flash"></span> </button></center>
+					<div id="test" class="collapse">
+						<div class="well">
+							<center><img src="../assets/wldurather-solution.jpg" class="img-responsive" alt="Would You Rather Storyboard Link Solution" width="80%"></center>
+						</div>
+					</div>
+					&nbsp;
+					<p>These connections have a certain <strong>logic</strong> to them and as your web design talents get more advanced, so will the logic.</p>
+				</div>
+				<div class="jumbotron" id="step5">
+					<h2>STEP 5: Share Your Make</h2>
+					<p>Awesome! Belive it or not, wou've made your first website or web app!</p> 
+					<ul style="font-size: large;">
+						<li>Take a pic of your storyboard using the tablet and make sure to save it to the drive;</li>
+						<li>Share your Would You Rather quiz with a friend... what do they think? Does it work?</li>
+						<li>Use the <a class="btn btn-default btn-xs" role="button"><span class="glyphicon glyphicon-option-horizontal"></span></a> menu to <strong>Share</strong> your make by email to get the link;</li>							
+					</ul>
+				</div>
+	        </div>
+
+
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	    <script src="../../assets/js/vendor/holder.min.js"></script>
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+	</body>
+	
+</html>
