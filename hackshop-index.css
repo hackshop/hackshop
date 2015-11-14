@@ -133,4 +133,5 @@ body {
 .bookmark {
 }
 
-
+div.jumbotron > div.container > ul, ol {font-size: large;}
+div.jumbotron > ul, ol {font-size: large;}
